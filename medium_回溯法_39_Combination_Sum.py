@@ -30,8 +30,6 @@ class Solution:
             path.append(candidates[index])
             # 因为下一层不能比上一层还小，起始索引还从 index 开始
             self.__dfs(candidates, index, size, path, res, residue)
-            path.pop()
+            path.pop()  # 回溯, pop出最后append的元素
 
-arr = [1, 2, 3]
-arr.append(666)
-print(arr.pop())
+
