@@ -16,8 +16,11 @@
 那么退出循环以后，可以直接返回 left（或者 right）。
 
 """
+def check(a):
+    pass
 
-def search(nums: List[int], left: int, right: int, target: int) -> int:
+# def search(nums: List[int], left: int, right: int, target: int) -> int:
+def search(nums, left, right, target):
     while left < right:
         # 选择中位数时下取整
         mid = left + (right - left) // 2
@@ -32,7 +35,8 @@ def search(nums: List[int], left: int, right: int, target: int) -> int:
 
 
 # 2
-def search(nums: List[int], left: int, right: int, target: int) -> int:
+# def search(nums: List[int], left: int, right: int, target: int) -> int:
+def search2(nums, left, right, target):
     while left < right:
         # 选择中位数时上取整
         mid = left + (right - left + 1) // 2
